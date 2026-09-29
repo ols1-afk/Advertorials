@@ -91,6 +91,12 @@ function ReasonBlock({ reason, className = "" }: { reason: Reason; className?: s
       ) : null}
 
       {reason.closing ? <p className="lp-reason-closing">{reason.closing}</p> : null}
+
+      {reason.ctaAfter ? (
+        <div className="lp-reason-cta">
+          <Cta label={offer.cta} className="lp-cta-lg" />
+        </div>
+      ) : null}
     </section>
   );
 }

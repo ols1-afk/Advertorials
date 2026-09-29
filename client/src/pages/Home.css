@@ -179,6 +179,12 @@
   margin-bottom: 0;
 }
 
+/* A call to action closing a reason, where the brief places one mid-page. */
+.lp-reason-cta {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
 .lp-reason-closing {
   border-left: 3px solid var(--lp-green);
   font-weight: 600;

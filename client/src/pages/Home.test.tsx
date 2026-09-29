@@ -125,6 +125,18 @@ describe("advertorial landing page", () => {
     expect(images.filter((i) => i.getAttribute("loading") === "eager").length).toBeLessThanOrEqual(1);
   });
 
+  it("places a call to action inside each reason the copy marks for one", () => {
+    const { container } = render(<Home />);
+
+    for (const reason of reasons) {
+      const section = container.querySelector(`#${reason.id}`);
+      expect(section?.querySelectorAll(".lp-reason-cta")).toHaveLength(reason.ctaAfter ? 1 : 0);
+    }
+    expect(container.querySelectorAll(".lp-reason-cta")).toHaveLength(
+      reasons.filter((reason) => reason.ctaAfter).length,
+    );
+  });
+
   it("points every call to action at the product page", () => {
     render(<Home />);
     const links = screen.getAllByRole("link");
