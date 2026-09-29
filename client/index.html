@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta
+      name="description"
+      content="TODO: the meta description for this offer." />
+    <meta name="theme-color" content="#f4eee3" />
+    <title>TODO: page title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap"
+      rel="stylesheet" />
+
+    <!--
+      RedTrack (uniclick) goes here, with THIS offer's ids. DetoxMe's tag was
+      deliberately not carried over: reusing its script_id or defaultcampaignid
+      would file this page's clicks under that campaign.
+
+      Place it in the head, before the app bundle, and neither async nor
+      deferred: it has to read the click identifiers and set its cookie before
+      paint, and decorate outbound links before any can be clicked.
+
+      <link rel="preconnect" href="https://go.YOURDOMAIN.com" crossorigin />
+      <script src="https://go.YOURDOMAIN.com/uniclick.js?attribution=lastpaid&cookiedomain=YOURDOMAIN.com&cookieduration=90&defaultcampaignid=TODO&regviewonce=false&script_id=TODO"></script>
+
+      The cookiedomain must match the domain this page is served from, or the
+      browser rejects the cookie write and only link decoration survives.
+
+      The cmpid and sub1-sub8 string is not part of this repo. It belongs on the
+      ad's destination URL in Meta Ads Manager, where Meta substitutes the
+      {{ad.id}} style tokens at click time.
+    -->
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+
+</html>

@@ -1,0 +1,478 @@
+/*
+ * Listicle landing page.
+ *
+ * Mobile-first: the overwhelming majority of paid social traffic lands on a
+ * phone, so the single-column layout is the real design and the wider
+ * breakpoints only relax it.
+ */
+
+.lp-shell {
+  --lp-ink: #14170f;
+  --lp-muted: #5b6152;
+  --lp-line: #e2e2d8;
+  --lp-paper: #fbfaf6;
+  --lp-green: #2f5d3a;
+  --lp-green-soft: #eaf1e9;
+  --lp-red: #8f2c2c;
+  --lp-red-soft: #f8ebeb;
+  --lp-gold: #d99a2b;
+  --lp-measure: 34rem;
+
+  background: var(--lp-paper);
+  color: var(--lp-ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  padding-bottom: 6rem;
+}
+
+.lp-shell main,
+.lp-masthead {
+  margin: 0 auto;
+  max-width: var(--lp-measure);
+  padding-inline: 1.25rem;
+}
+
+/* ---------------------------------------------------------------- masthead */
+
+.lp-masthead {
+  align-items: center;
+  border-bottom: 1px solid var(--lp-line);
+  display: flex;
+  justify-content: center;
+  padding-block: 1.15rem;
+}
+
+.lp-brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* ------------------------------------------------------------------- hero */
+
+.lp-hero {
+  padding-block: 2.25rem 2.75rem;
+  text-align: center;
+}
+
+.lp-hero h1 {
+  font-size: clamp(1.85rem, 7vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.14;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.lp-hero-sub {
+  color: var(--lp-muted);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0.7rem 0 0;
+  text-wrap: balance;
+}
+
+.lp-hero-body {
+  margin: 1.15rem 0 1.6rem;
+  text-wrap: pretty;
+}
+
+/* The hero image sits below the headline and subheadline, so it needs space
+   above it as well as below. */
+.lp-hero .lp-figure {
+  margin-top: 1.35rem;
+}
+
+.lp-social-proof {
+  align-items: center;
+  color: var(--lp-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 1rem 0 0;
+}
+
+.lp-stars {
+  color: var(--lp-gold);
+  display: inline-flex;
+  gap: 0.1rem;
+}
+
+.lp-stars svg {
+  fill: currentColor;
+  height: 1rem;
+  width: 1rem;
+}
+
+/* --------------------------------------------------------------------- CTA */
+
+.lp-cta {
+  background: var(--lp-green);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  height: auto;
+  letter-spacing: 0.01em;
+  padding: 0.85rem 1.75rem;
+  white-space: normal;
+}
+
+.lp-cta:hover {
+  background: #26492e;
+}
+
+.lp-cta-lg {
+  font-size: 1.075rem;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------- reasons */
+
+.lp-reason {
+  border-top: 1px solid var(--lp-line);
+  padding-block: 2.5rem;
+}
+
+.lp-reason-eyebrow {
+  align-items: baseline;
+  color: var(--lp-green);
+  display: flex;
+  font-size: 0.775rem;
+  font-weight: 700;
+  gap: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.lp-reason-number {
+  color: var(--lp-muted);
+  letter-spacing: 0.08em;
+}
+
+.lp-reason-number::before {
+  content: "— ";
+}
+
+.lp-reason h2 {
+  font-size: clamp(1.4rem, 5.2vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0.6rem 0 1.25rem;
+  text-wrap: balance;
+}
+
+.lp-reason p {
+  margin: 0 0 1rem;
+  text-wrap: pretty;
+}
+
+.lp-reason p:last-child {
+  margin-bottom: 0;
+}
+
+.lp-reason-closing {
+  border-left: 3px solid var(--lp-green);
+  font-weight: 600;
+  padding-left: 0.9rem;
+}
+
+/* ----------------------------------------------------------------- figures */
+
+.lp-figure {
+  margin: 0 0 1.35rem;
+}
+
+.lp-figure img {
+  border: 1px solid var(--lp-line);
+  border-radius: 0.75rem;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.lp-figure figcaption {
+  color: var(--lp-muted);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------- stats */
+
+.lp-stats {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+}
+
+.lp-stats li {
+  align-items: baseline;
+  background: var(--lp-green-soft);
+  border-radius: 0.6rem;
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: 3.1rem 1fr;
+  padding: 0.7rem 0.85rem;
+}
+
+.lp-stats strong {
+  color: var(--lp-green);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.lp-stats span {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* ------------------------------------------------------------------- offer */
+
+.lp-offer {
+  border-top: 1px solid var(--lp-line);
+  padding-block: 2.5rem;
+  text-align: center;
+}
+
+.lp-offer h2 {
+  font-size: clamp(1.5rem, 5.5vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
+  margin: 0 0 1rem;
+  text-wrap: balance;
+}
+
+.lp-offer p {
+  margin: 0 0 1.25rem;
+  text-wrap: pretty;
+}
+
+.lp-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: center;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.lp-badges li {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--lp-line);
+  border-radius: 999px;
+  color: var(--lp-muted);
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 600;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+}
+
+.lp-badges svg {
+  color: var(--lp-green);
+  height: 0.9rem;
+  width: 0.9rem;
+}
+
+.lp-guarantee {
+  color: var(--lp-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ----------------------------------------------------------------- reviews */
+
+.lp-reviews {
+  border-top: 1px solid var(--lp-line);
+  padding-block: 2.5rem;
+}
+
+.lp-reviews h2 {
+  font-size: clamp(1.35rem, 5vw, 1.7rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin: 0 0 1.5rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.lp-review-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.lp-review {
+  background: #fff;
+  border: 1px solid var(--lp-line);
+  border-radius: 0.75rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1.15rem;
+}
+
+/*
+ * On a phone the photograph runs full width above the words. These are
+ * before-and-after pairs, so they are already two images side by side; shrinking
+ * one into a column beside the text would leave each half around 70px wide and
+ * throw away the proof the photo exists to carry. From 30rem up there is room
+ * to set it beside the review, which is where it belongs.
+ */
+.lp-review-photo {
+  border: 1px solid var(--lp-line);
+  border-radius: 0.5rem;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+@media (min-width: 30rem) {
+  .lp-review {
+    align-items: start;
+    grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
+  }
+}
+
+.lp-review h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.5rem;
+}
+
+.lp-review p {
+  margin: 0 0 0.9rem;
+  text-wrap: pretty;
+}
+
+.lp-review footer {
+  align-items: center;
+  color: var(--lp-muted);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  gap: 0.6rem;
+}
+
+.lp-verified {
+  align-items: center;
+  color: var(--lp-green);
+  display: inline-flex;
+  font-weight: 600;
+  gap: 0.2rem;
+}
+
+.lp-verified svg {
+  height: 0.85rem;
+  width: 0.85rem;
+}
+
+.lp-review-summary {
+  align-items: center;
+  border-block: 1px solid var(--lp-line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+  padding-block: 1rem;
+}
+
+.lp-review-summary-label {
+  font-weight: 700;
+}
+
+.lp-review-summary-score {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.lp-review-summary-count {
+  color: var(--lp-muted);
+  font-size: 0.9rem;
+}
+
+/* -------------------------------------------------------------- disclaimer */
+
+.lp-disclaimer {
+  border-top: 1px solid var(--lp-line);
+  color: var(--lp-muted);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  margin: 0;
+  padding-block: 1.75rem 0;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------ sticky offer */
+
+.lp-sticky {
+  backdrop-filter: blur(8px);
+  background: rgba(251, 250, 246, 0.94);
+  border-top: 1px solid var(--lp-line);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  padding: 0.7rem 1.25rem calc(0.7rem + env(safe-area-inset-bottom));
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  z-index: 20;
+}
+
+.lp-sticky.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.lp-sticky .lp-cta {
+  display: flex;
+  margin: 0 auto;
+  max-width: var(--lp-measure);
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-sticky {
+    transition: none;
+  }
+}
+
+/* ------------------------------------------------------------ wider screens */
+
+@media (min-width: 48rem) {
+  .lp-shell {
+    --lp-measure: 40rem;
+    font-size: 1.09375rem;
+  }
+
+  .lp-reason,
+  .lp-offer,
+  .lp-reviews {
+    padding-block: 3.25rem;
+  }
+
+  .lp-cta-lg {
+    width: auto;
+  }
+
+  .lp-stats li {
+    grid-template-columns: 3.6rem 1fr;
+  }
+}
