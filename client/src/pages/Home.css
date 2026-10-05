@@ -1,5 +1,5 @@
 /*
- * Listicle landing page.
+ * Advertorial landing page.
  *
  * Mobile-first: the overwhelming majority of paid social traffic lands on a
  * phone, so the single-column layout is the real design and the wider
@@ -7,20 +7,28 @@
  */
 
 .lp-shell {
-  --lp-ink: #14170f;
-  --lp-muted: #5b6152;
-  --lp-line: #e2e2d8;
-  --lp-paper: #fbfaf6;
-  --lp-green: #2f5d3a;
-  --lp-green-soft: #eaf1e9;
-  --lp-red: #8f2c2c;
-  --lp-red-soft: #f8ebeb;
-  --lp-gold: #d99a2b;
+  --lp-ink: #1b1710;
+  --lp-muted: #6b6354;
+  --lp-line: #e7e0d2;
+  --lp-paper: #fdfaf3;
+  --lp-gold: #b8830f;
+  --lp-gold-deep: #8f6508;
+  --lp-gold-soft: #fdf3dc;
+  --lp-amber: #d99a2b;
+  --lp-red: #a8322c;
+  --lp-red-soft: #fbeceb;
   --lp-measure: 34rem;
 
   background: var(--lp-paper);
   color: var(--lp-ink);
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
     sans-serif;
   font-size: 1.0625rem;
   line-height: 1.62;
@@ -34,6 +42,48 @@
   margin: 0 auto;
   max-width: var(--lp-measure);
   padding-inline: 1.25rem;
+}
+
+/* Visible to screen readers only. Used where an icon carries the meaning. */
+.lp-sr {
+  border: 0;
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* ------------------------------------------------------- announcement bar */
+
+.lp-announce {
+  align-items: center;
+  background: var(--lp-gold-deep);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  gap: 0.25rem 0.6rem;
+  justify-content: center;
+  letter-spacing: 0.01em;
+  padding: 0.55rem 1.25rem;
+  text-align: center;
+}
+
+.lp-announce strong {
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lp-announce-offer {
+  font-weight: 600;
+}
+
+.lp-announce-clock {
+  font-variant-numeric: tabular-nums;
+  opacity: 0.9;
 }
 
 /* ---------------------------------------------------------------- masthead */
@@ -52,11 +102,10 @@
   letter-spacing: -0.02em;
 }
 
-/* ------------------------------------------------------------------- hero */
+/* -------------------------------------------------------------------- hero */
 
 .lp-hero {
-  padding-block: 2.25rem 2.75rem;
-  text-align: center;
+  padding-block: 2.25rem 2.25rem;
 }
 
 .lp-hero h1 {
@@ -68,38 +117,65 @@
   text-wrap: balance;
 }
 
-.lp-hero-sub {
-  color: var(--lp-muted);
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin: 0.7rem 0 0;
-  text-wrap: balance;
+/* ------------------------------------------------------------------ byline */
+
+.lp-byline {
+  align-items: center;
+  border-bottom: 1px solid var(--lp-line);
+  display: flex;
+  gap: 0.7rem;
+  margin: 1.2rem 0 1.4rem;
+  padding-bottom: 1rem;
 }
 
-.lp-hero-body {
-  margin: 1.15rem 0 1.6rem;
+.lp-byline-photo {
+  border-radius: 999px;
+  flex: none;
+  height: 2.6rem;
+  object-fit: cover;
+  width: 2.6rem;
+}
+
+.lp-byline p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.6rem;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.lp-byline-author {
+  font-weight: 700;
+}
+
+.lp-byline-updated {
+  color: var(--lp-muted);
+}
+
+/* ----------------------------------------------------------------- summary */
+
+.lp-summary {
+  background: var(--lp-gold-soft);
+  border-left: 3px solid var(--lp-gold);
+  border-radius: 0 0.6rem 0.6rem 0;
+  margin: 0;
+  padding: 1rem 1.1rem;
   text-wrap: pretty;
 }
 
-/* The hero image sits below the headline and subheadline, so it needs space
-   above it as well as below. */
-.lp-hero .lp-figure {
-  margin-top: 1.35rem;
+.lp-summary strong {
+  font-weight: 800;
 }
 
-.lp-social-proof {
-  align-items: center;
-  color: var(--lp-muted);
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 0.9rem;
-  gap: 0.5rem;
-  justify-content: center;
-  margin: 1rem 0 0;
+/* The hero image sits between the byline and the summary. */
+.lp-hero .lp-figure {
+  margin-bottom: 1.4rem;
 }
+
+/* ------------------------------------------------------------------- stars */
 
 .lp-stars {
-  color: var(--lp-gold);
+  color: var(--lp-amber);
   display: inline-flex;
   gap: 0.1rem;
 }
@@ -113,7 +189,7 @@
 /* --------------------------------------------------------------------- CTA */
 
 .lp-cta {
-  background: var(--lp-green);
+  background: var(--lp-gold);
   border-radius: 999px;
   color: #fff;
   font-size: 1rem;
@@ -125,13 +201,140 @@
 }
 
 .lp-cta:hover {
-  background: #26492e;
+  background: var(--lp-gold-deep);
 }
 
 .lp-cta-lg {
   font-size: 1.075rem;
   padding: 1rem 2rem;
   width: 100%;
+}
+
+/* ---------------------------------------------------------- comparison table */
+
+.lp-compare {
+  border-top: 1px solid var(--lp-line);
+  padding-block: 2.5rem;
+}
+
+.lp-compare h2 {
+  font-size: clamp(1.25rem, 4.8vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.22;
+  margin: 0 0 1.25rem;
+  text-wrap: balance;
+}
+
+/*
+ * Five product columns plus the row labels do not fit a phone, so the table
+ * scrolls sideways inside its own region. The row labels stay pinned to the
+ * left edge, because a mark means nothing once its label has scrolled away.
+ * The bleed lets the scroller reach the screen edges inside the measured
+ * column, so it reads as scrollable rather than as a clipped table.
+ */
+.lp-compare-scroll {
+  margin-inline: -1.25rem;
+  overflow-x: auto;
+  padding-inline: 1.25rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.lp-compare-scroll:focus-visible {
+  outline: 2px solid var(--lp-gold);
+  outline-offset: 2px;
+}
+
+.lp-compare-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.85rem;
+  min-width: 100%;
+  width: max-content;
+}
+
+.lp-compare-table th,
+.lp-compare-table td {
+  border-bottom: 1px solid var(--lp-line);
+  padding: 0.6rem 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.lp-compare-table thead th {
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 5.25rem;
+  min-width: 4rem;
+}
+
+/*
+ * The row labels are pinned, so they hold a fixed width rather than their
+ * natural one: left to size themselves, the longest label pushes every product
+ * column off the right of a phone, and the reader meets what looks like a
+ * one-column table. Capped, the first two comparisons and a slice of the third
+ * are visible at 390px, which is what tells anyone there is more to scroll to.
+ */
+.lp-compare-table tbody th {
+  background: var(--lp-paper);
+  font-size: 0.8rem;
+  font-weight: 600;
+  left: 0;
+  line-height: 1.25;
+  max-width: 8.25rem;
+  min-width: 8.25rem;
+  position: sticky;
+  text-align: left;
+  width: 8.25rem;
+  z-index: 1;
+}
+
+.lp-compare-table tbody tr:last-child th,
+.lp-compare-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* The product's own column is the one the reader is being asked to compare
+   everything against, so it is tinted the whole way down. */
+.lp-compare-table .is-highlight {
+  background: var(--lp-gold-soft);
+}
+
+.lp-compare-table thead .is-highlight {
+  border-radius: 0.5rem 0.5rem 0 0;
+  color: var(--lp-gold-deep);
+}
+
+.lp-mark {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.lp-mark svg {
+  height: 1.15rem;
+  stroke-width: 3;
+  width: 1.15rem;
+}
+
+.lp-mark.is-yes svg {
+  color: #2f7d3a;
+}
+
+.lp-mark.is-no svg {
+  color: var(--lp-red);
+}
+
+.lp-mark.is-warn svg {
+  color: var(--lp-amber);
+}
+
+.lp-mark-note {
+  color: var(--lp-muted);
+  font-size: 0.68rem;
+  line-height: 1.2;
 }
 
 /* ----------------------------------------------------------------- reasons */
@@ -143,22 +346,18 @@
 
 .lp-reason-eyebrow {
   align-items: baseline;
-  color: var(--lp-green);
+  color: var(--lp-gold-deep);
   display: flex;
   font-size: 0.775rem;
   font-weight: 700;
-  gap: 0.6rem;
+  gap: 0.4rem;
   letter-spacing: 0.14em;
+  margin: 0;
   text-transform: uppercase;
 }
 
 .lp-reason-number {
-  color: var(--lp-muted);
   letter-spacing: 0.08em;
-}
-
-.lp-reason-number::before {
-  content: "— ";
 }
 
 .lp-reason h2 {
@@ -179,16 +378,59 @@
   margin-bottom: 0;
 }
 
-/* A call to action closing a reason, where the brief places one mid-page. */
-.lp-reason-cta {
-  margin-top: 1.5rem;
-  text-align: center;
+/* ---------------------------------------------------------------- timeline */
+
+.lp-timeline {
+  display: grid;
+  gap: 0;
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0 0 0 1.1rem;
+  position: relative;
 }
 
-.lp-reason-closing {
-  border-left: 3px solid var(--lp-green);
-  font-weight: 600;
-  padding-left: 0.9rem;
+/* The spine runs behind the markers rather than between them, so it does not
+   break where a row's text wraps to a different height. */
+.lp-timeline::before {
+  background: var(--lp-line);
+  bottom: 0.9rem;
+  content: "";
+  left: 0.2rem;
+  position: absolute;
+  top: 0.9rem;
+  width: 2px;
+}
+
+.lp-timeline li {
+  padding: 0 0 1.1rem 0.95rem;
+  position: relative;
+}
+
+.lp-timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.lp-timeline li::before {
+  background: var(--lp-gold);
+  border-radius: 999px;
+  content: "";
+  height: 0.6rem;
+  left: -0.0625rem;
+  position: absolute;
+  top: 0.65rem;
+  width: 0.6rem;
+}
+
+.lp-timeline strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lp-timeline span {
+  text-wrap: pretty;
 }
 
 /* ----------------------------------------------------------------- figures */
@@ -212,43 +454,29 @@
   text-align: center;
 }
 
-/* ------------------------------------------------------------------- stats */
-
-.lp-stats {
-  display: grid;
-  gap: 0.65rem;
-  list-style: none;
-  margin: 0 0 1.25rem;
-  padding: 0;
-}
-
-.lp-stats li {
-  align-items: baseline;
-  background: var(--lp-green-soft);
-  border-radius: 0.6rem;
-  display: grid;
-  gap: 0.7rem;
-  grid-template-columns: 3.1rem 1fr;
-  padding: 0.7rem 0.85rem;
-}
-
-.lp-stats strong {
-  color: var(--lp-green);
-  font-size: 1.2rem;
-  font-weight: 800;
-}
-
-.lp-stats span {
-  font-size: 0.95rem;
-  line-height: 1.45;
+/* A second image closing a section sits below the words, not above them. */
+.lp-figure-trailing {
+  margin: 1.5rem 0 0;
 }
 
 /* ------------------------------------------------------------------- offer */
 
 .lp-offer {
-  border-top: 1px solid var(--lp-line);
-  padding-block: 2.5rem;
+  background: var(--lp-gold-soft);
+  border: 1px solid var(--lp-line);
+  border-radius: 1rem;
+  margin-block: 2.5rem;
+  padding: 2rem 1.25rem;
   text-align: center;
+}
+
+.lp-offer-gifts {
+  color: var(--lp-gold-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
 }
 
 .lp-offer h2 {
@@ -260,9 +488,18 @@
   text-wrap: balance;
 }
 
-.lp-offer p {
+.lp-offer-scarcity {
   margin: 0 0 1.25rem;
   text-wrap: pretty;
+}
+
+.lp-offer-clock {
+  font-variant-numeric: tabular-nums;
+  margin: 0 0 1.1rem;
+}
+
+.lp-offer-clock time {
+  font-weight: 800;
 }
 
 .lp-badges {
@@ -271,7 +508,7 @@
   gap: 0.45rem;
   justify-content: center;
   list-style: none;
-  margin: 0 0 1.5rem;
+  margin: 1.25rem 0 1.1rem;
   padding: 0;
 }
 
@@ -289,7 +526,7 @@
 }
 
 .lp-badges svg {
-  color: var(--lp-green);
+  color: var(--lp-gold);
   height: 0.9rem;
   width: 0.9rem;
 }
@@ -332,11 +569,8 @@
 }
 
 /*
- * On a phone the photograph runs full width above the words. These are
- * before-and-after pairs, so they are already two images side by side; shrinking
- * one into a column beside the text would leave each half around 70px wide and
- * throw away the proof the photo exists to carry. From 30rem up there is room
- * to set it beside the review, which is where it belongs.
+ * On a phone the photograph runs full width above the words. From 30rem up
+ * there is room to set it in a column beside the review.
  */
 .lp-review-photo {
   border: 1px solid var(--lp-line);
@@ -347,20 +581,14 @@
 }
 
 @media (min-width: 30rem) {
-  .lp-review {
+  .lp-review:has(.lp-review-photo) {
     align-items: start;
     grid-template-columns: minmax(0, 11rem) minmax(0, 1fr);
   }
 }
 
-.lp-review h3 {
-  font-size: 1.02rem;
-  font-weight: 700;
-  margin: 0.5rem 0 0.5rem;
-}
-
 .lp-review p {
-  margin: 0 0 0.9rem;
+  margin: 0.5rem 0 0.9rem;
   text-wrap: pretty;
 }
 
@@ -375,7 +603,7 @@
 
 .lp-verified {
   align-items: center;
-  color: var(--lp-green);
+  color: var(--lp-gold-deep);
   display: inline-flex;
   font-weight: 600;
   gap: 0.2rem;
@@ -386,29 +614,21 @@
   width: 0.85rem;
 }
 
-.lp-review-summary {
-  align-items: center;
-  border-block: 1px solid var(--lp-line);
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  justify-content: center;
-  margin: 1.5rem 0;
-  padding-block: 1rem;
-}
-
-.lp-review-summary-label {
+.lp-review-expand {
+  background: transparent;
+  border: 1px solid var(--lp-line);
+  border-radius: 999px;
+  color: var(--lp-ink);
+  cursor: pointer;
+  display: block;
+  font-size: 0.95rem;
   font-weight: 700;
+  margin: 1.25rem auto 0;
+  padding: 0.7rem 1.5rem;
 }
 
-.lp-review-summary-score {
-  font-size: 1.5rem;
-  font-weight: 800;
-}
-
-.lp-review-summary-count {
-  color: var(--lp-muted);
-  font-size: 0.9rem;
+.lp-review-expand:hover {
+  background: #fff;
 }
 
 /* -------------------------------------------------------------- disclaimer */
@@ -423,11 +643,39 @@
   text-align: center;
 }
 
+/* ------------------------------------------------------------------ footer */
+
+.lp-footer {
+  color: var(--lp-muted);
+  font-size: 0.8rem;
+  padding-block: 1.5rem 0;
+  text-align: center;
+}
+
+.lp-footer p {
+  margin: 0 0 0.5rem;
+}
+
+.lp-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lp-footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 /* ------------------------------------------------------------ sticky offer */
 
 .lp-sticky {
   backdrop-filter: blur(8px);
-  background: rgba(251, 250, 246, 0.94);
+  background: rgba(253, 250, 243, 0.94);
   border-top: 1px solid var(--lp-line);
   bottom: 0;
   left: 0;
@@ -437,7 +685,9 @@
   position: fixed;
   right: 0;
   transform: translateY(100%);
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
   z-index: 20;
 }
 
@@ -468,17 +718,36 @@
     font-size: 1.09375rem;
   }
 
+  .lp-compare,
   .lp-reason,
-  .lp-offer,
   .lp-reviews {
     padding-block: 3.25rem;
   }
 
-  .lp-cta-lg {
-    width: auto;
+  .lp-offer {
+    padding: 2.5rem 2rem;
   }
 
-  .lp-stats li {
-    grid-template-columns: 3.6rem 1fr;
+  /* There is room for the whole table here, so it fills the measure and
+     stops scrolling rather than hiding a column behind a scrollbar nobody
+     on a mouse expects to find. */
+  .lp-compare-table {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .lp-compare-table tbody th {
+    font-size: 0.875rem;
+    max-width: 9rem;
+    min-width: 9rem;
+    width: 9rem;
+  }
+
+  .lp-compare-table thead th {
+    max-width: none;
+  }
+
+  .lp-cta-lg {
+    width: auto;
   }
 }

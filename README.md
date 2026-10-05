@@ -4,9 +4,10 @@ Landing pages for direct response advertorials. Each page is copy-driven: the
 words and artwork live in a typed content file, and the page renders whatever
 that file holds.
 
-The first page here is a seven-reasons listicle, currently **scaffolded with
-placeholder copy awaiting the real thing**. It builds, renders and passes its
-suite, but nothing in it should reach paid traffic yet.
+The page here is the Alvenica aged-ginger advertorial, _7 Reasons Women Over 65
+Are Swapping Their Ibuprofen For Aged Ginger_. The copy is written; the offer,
+the artwork and the tracking identifiers are not. See **Still outstanding**
+below before running traffic.
 
 Descended from [`ols1-afk/Detox-Listicle`](https://github.com/ols1-afk/Detox-Listicle),
 which runs the same stack in production. The structure, styling and deploy setup
@@ -15,8 +16,8 @@ did not.
 
 ## Stack
 
-| Layer       | Technology                                            |
-| ----------- | ----------------------------------------------------- |
+| Layer       | Technology                                             |
+| ----------- | ------------------------------------------------------ |
 | Frontend    | React 19, Vite 7, TypeScript, Tailwind CSS 4, wouter   |
 | UI kit      | shadcn/ui on Radix primitives, lucide-react            |
 | API         | tRPC 11 over Express 4                                 |
@@ -48,11 +49,26 @@ cannot change how the page behaves.
 The page is laid out as:
 
 ```
-hero  →  seven numbered reasons  →  social proof  →  offer  →  reviews  →  disclaimer
+announcement bar  →  headline + byline + summary  →  comparison table
+  →  reasons 1-5  →  offer  →  reasons 6-7  →  reviews  →  offer  →  disclaimer + footer
 ```
+
+The mid-page offer block is placed by the content file, not the component: the
+reason that carries `offerAfter: true` is followed by a full offer. Moving the
+interruption means moving that flag.
 
 - **Copy** — replace the `TODO` strings. The tests assert structure rather than
   wording, so they keep passing as the copy lands.
+- **Emphasis** — body copy understands `**bold**` and `*italic*` and nothing
+  else. The renderer is a dozen lines rather than a markdown dependency, which
+  keeps apostrophes, brackets and underscores in the prose meaning what they
+  say. A test fails if a marker ever reaches the rendered page.
+- **The countdown** — `announcement.countdownTo` takes a fixed ISO timestamp, so
+  every visitor sees the same clock reach zero at the same moment. Left unset,
+  no countdown renders at all. It is deliberately not a per-visitor timer that
+  restarts on reload.
+- **Reviews** — an entry marked `extra: true` sits behind the "Read More
+  Reviews" button.
 - **Artwork** — drop files in `client/public/images/` and fill the `image` field
   on the entry it belongs to (`src`, `alt`, `width`, `height`, optional
   `caption`). An entry with no image renders text-only by design, so a
@@ -64,6 +80,22 @@ hero  →  seven numbered reasons  →  social proof  →  offer  →  reviews  
   element. Everything below the fold stays lazy.
 - **Layout and styling** — `pages/Home.css`. Mobile-first: the single-column
   layout is the real design and the wider breakpoints only relax it.
+
+## Still outstanding
+
+Everything below is a `TODO` in the source and blocks paid traffic:
+
+- `PRODUCT_URL`, and the offer itself — `offer.headline` and
+  `announcement.offer` both read `OFFER TBC`.
+- The byline's author and date, and the sale's end date for the countdown.
+- All artwork. Every slot records the image it was briefed with as a comment
+  above it; an unfilled slot renders text-only by design.
+- The footer's privacy and terms URLs. Without an `href` they render as plain
+  text rather than as links that go nowhere.
+- The disclaimer. Ginger at supplement doses is commonly flagged for
+  interaction with anticoagulant and antiplatelet medicines and around surgery,
+  which matters more than usual for an audience of 65 and over.
+- RedTrack's `script_id` and `defaultcampaignid` — see below.
 
 ## Tracking
 
