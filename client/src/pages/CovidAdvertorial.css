@@ -487,6 +487,11 @@
   text-align: center;
 }
 
+/* An odd tile out spans the full row rather than leaving a hole. */
+.ca-stat:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .ca-stat-value {
   color: var(--ca-accent);
   font-size: 38px;

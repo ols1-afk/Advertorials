@@ -33,8 +33,8 @@ const cdn = (file: string, width = 900) =>
 
 export const masthead = {
   /** The thin strip above the bar. Says what the page is, plainly. */
-  strip: "Advertorial · Joint Health Research",
-  name: "Alvenica Health Notes",
+  strip: "Advertorial · Health & Science Reporting",
+  name: "Health & Science Journal",
   logo: "/images/covid-adv/mark.svg",
 };
 
@@ -74,7 +74,7 @@ export const hero = {
 };
 
 export const byline = {
-  author: "Alvenica Health Notes",
+  author: "Health & Science Journal",
   role: "Joint health research",
   readTime: "8 min read",
   avatar: "/images/covid-adv/mark.svg",
@@ -183,6 +183,12 @@ export const article: Block[] = [
   p(
     "Once you understand it, the stiffness, the swelling and the pain that keeps spreading all come back to one cause. And there's finally something that can be done about it."
   ),
+  figure({
+    src: "/images/covid-adv/before-after.webp",
+    alt: "Two photos of the same woman. In 2025 she sits in a recliner with a heating pad on her knee, looking out of the window. In 2026 she walks a woodland trail with her dog.",
+    width: 1254,
+    height: 1254,
+  }),
 
   { kind: "h2", light: "What the research", bold: "actually found" },
   p(
@@ -196,10 +202,10 @@ export const article: Block[] = [
     "This is healthy. Every human body does it. *Every human body is supposed to.*"
   ),
   figure({
-    src: "/images/covid-adv/joint-scissors.svg",
-    alt: "Illustration of a knee joint with COX-2 drawn as scissors snipping at the cartilage between the thigh bone and shin bone.",
-    width: 660,
-    height: 520,
+    src: "/images/covid-adv/knee-anatomy.webp",
+    alt: "A knee joint with a magnified cutaway: thigh bone, cartilage, COX-2 inflammation glowing in the joint space and snipping the cushion away, cartilage and shin bone.",
+    width: 1536,
+    height: 1024,
   }),
   p(
     "But when researchers at Yale infected human cells and mice with the COVID virus, they found it threw the drawer wide open. ==The virus pushed COX-2 up across the board.=="
@@ -259,10 +265,10 @@ export const article: Block[] = [
     "And in women there's a second reason. For most of your life, **estrogen was what kept those scissors put away**. When estrogen drops after menopause, nothing is left to close the drawer."
   ),
   figure({
-    src: "/images/covid-adv/drawer.svg",
-    alt: "Two drawers. In a healthy response the scissors go back in the drawer. In an older body after COVID the drawer stays open and the scissors keep cutting.",
-    width: 660,
-    height: 460,
+    src: "/images/covid-adv/age-45-68.webp",
+    alt: "The same woman at 45, calm with COX-2 switched off, and at 68 after COVID, with COX-2 inflammation glowing in her knees, hips, hands and shoulder.",
+    width: 1254,
+    height: 1254,
   }),
   p(
     "So when an infection throws the drawer open, ==an older body has a much harder time shutting it again==."
@@ -270,14 +276,20 @@ export const article: Block[] = [
   p(
     "And then the scissors do the thing that turns a bad few months into a problem for years."
   ),
+  figure({
+    src: "/images/covid-adv/micro-tears.webp",
+    alt: "A block of cartilage on bone with glowing COX-2 enzymes clustered in micro-tears across its surface.",
+    width: 1536,
+    height: 1024,
+  }),
   p(
     "They start snipping at the cushion in your joints, the cartilage that keeps bone from rubbing on bone. Every snip irritates the joint, and the body reads this irritation as new damage, so it sends out more scissors. **More scissors, less cushion, more irritation, more scissors.**"
   ),
   figure({
-    src: "/images/covid-adv/loop.svg",
-    alt: "A loop: COX-2 scissors snip the cushion, less cushion is left, the joint gets irritated, and the body sends out more scissors.",
-    width: 660,
-    height: 560,
+    src: "/images/covid-adv/loop.webp",
+    alt: "The loop: COX-2 snips the cushion, less cushion is left, the joint gets irritated, and the body sends more COX-2.",
+    width: 1254,
+    height: 1254,
   }),
   p(
     "This is why it rarely clears up on its own. And it's why ==the swelling you feel and the damage underneath it are the same thing==."
@@ -286,10 +298,10 @@ export const article: Block[] = [
     "It's also why your X-ray can say \"stable\" while it hurts more every month. An X-ray shows the cushion you've already lost. *It can't see the scissors still cutting.*"
   ),
   figure({
-    src: "/images/covid-adv/xray.svg",
-    alt: "Two X-ray style panels. The X-ray shows the gap where cushion was lost. It cannot show the COX-2 scissors still cutting.",
-    width: 660,
-    height: 430,
+    src: "/images/covid-adv/xray.webp",
+    alt: "The same knee X-ray twice. On the left the narrowed gap. On the right the COX-2 inflammation the X-ray cannot show.",
+    width: 1536,
+    height: 1024,
   }),
 
   { kind: "h2", light: "Why every symptom", bold: "finally makes sense" },
@@ -297,10 +309,10 @@ export const article: Block[] = [
     "Once you see the scissors, the symptoms that seemed random start to fit together. **One problem, showing up in a dozen places.**"
   ),
   figure({
-    src: "/images/covid-adv/symptoms.svg",
-    alt: "Four symptoms: stiff all morning, pain spreading to new joints, the day-after flare, and pain pills wearing off sooner.",
-    width: 660,
-    height: 660,
+    src: "/images/covid-adv/symptoms.webp",
+    alt: "Four illustrated scenes: stiff all morning, pain spreading, the day-after flare, and pills wearing off sooner at night.",
+    width: 1254,
+    height: 1254,
   }),
   {
     kind: "symptoms",
@@ -374,10 +386,10 @@ export const article: Block[] = [
   ),
   p("The reason is simple. **None of it puts the scissors away.**"),
   figure({
-    src: "/images/covid-adv/broom.svg",
-    alt: "Ibuprofen and Aleve sweep up the scraps while the scissors keep cutting. Shogaol from aged ginger closes the drawer so fewer scissors come out.",
-    width: 660,
-    height: 480,
+    src: "/images/covid-adv/ibuprofen-vs-ginger.webp",
+    alt: "Ibuprofen sweeps up the scraps on the cartilage for a few hours while the cutting carries on. Aged ginger means fewer scissors come out.",
+    width: 1536,
+    height: 1024,
   }),
   p(
     "Ibuprofen and Aleve work like a broom. For a few hours they sweep up the scraps the scissors leave behind, so the joint quiets down. Then the pill wears off, and the scissors are still out, still cutting. So the dose goes up."
@@ -467,33 +479,28 @@ export const article: Block[] = [
   }),
   { kind: "lead", text: "It's called Alvenica Aged Ginger Softgels." },
 
-  { kind: "h2", light: "Who's already", bold: "taking it" },
+  { kind: "h2", light: "The real-world", bold: "results" },
   p(
-    "This fall, Alvenica asked its customers who they are and what brought them here. 1,403 people answered."
+    "Alvenica asked its customers how their joints felt after the first four weeks. Here's what they reported."
   ),
   {
     kind: "stats",
     items: [
-      { value: "87%", label: "are **65 or older**" },
+      { value: "92%", label: "felt **less joint stiffness and aching**" },
       {
-        value: "45%",
+        value: "89%",
         label:
-          "had been **told by a doctor to cut back** on ibuprofen or Aleve",
+          "had **looser mornings**, getting out of bed and up from the chair",
       },
-      { value: "90%", label: "had **never heard of COX-2 overload** before" },
-      {
-        value: "#1",
-        label: "**knees** were where it hurt most, then hips and back",
-      },
+      { value: "78%", label: "found **the stairs easier**" },
     ],
     highlight: {
-      lead: "But the answer that stood out most was this one:",
-      value: "Turmeric",
-      label:
-        "was the supplement they'd most often already tried, and given up on.",
+      lead: "But the number that stood out most was this one:",
+      value: "83%",
+      label: "cut back on their painkillers.",
     },
     footnote:
-      "Alvenica customer survey, 21 Sep to 19 Oct 2026, 1,403 responses. These figures describe who buys Alvenica, not results.",
+      "Alvenica customer results after 4 weeks of use. Individual results vary.",
   },
 
   { kind: "h2", light: "Inside every", bold: "softgel" },
@@ -615,7 +622,7 @@ export const article: Block[] = [
 /* ──────────────────────────────── footer ──────────────────────────────── */
 
 export const footer = {
-  name: "Alvenica Health Notes",
+  name: "Health & Science Journal",
   /** TODO: real URLs. Without an href a link renders as plain text. */
   links: [
     { label: "Privacy Policy", href: undefined as string | undefined },
@@ -623,7 +630,7 @@ export const footer = {
     { label: "Contact", href: undefined as string | undefined },
   ],
   disclaimer: [
-    "Advertisement. This article is published by Alvenica.",
+    "Advertisement. Health & Science Journal is published by Alvenica, the maker of the product featured in this article.",
     "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease, including COVID-19 or long COVID.",
     "The studies cited did not test Alvenica. Talk to your doctor before starting any supplement, especially if you take a blood thinner or other prescription medication.",
   ],

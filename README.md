@@ -28,19 +28,19 @@ listicle from `main` is still reachable at `/listicle`.
 | Copy, images, CTA URL, footer sources | `client/src/content/covidAdvertorialContent.ts` |
 | Page                                  | `client/src/pages/CovidAdvertorial.tsx`         |
 | Styles                                | `client/src/pages/CovidAdvertorial.css`         |
-| Mechanism illustrations (SVG)         | `client/public/images/covid-adv/`               |
+| Mechanism images (WebP and SVG)       | `client/public/images/covid-adv/`               |
 | Product photos                        | Hotlinked from Alvenica's Shopify CDN           |
 
 The article is an ordered array of typed blocks (`p`, `h2`, `figure`,
 `evidence`, `symptoms`, `stats`, `cta`, …). Reorder the page by reordering
 the array. Body copy understands `**bold**`, `*italic*` and `==highlight==`.
 
-**Deliberately different from Fascial:** the masthead says "Advertorial" and
-names Alvenica rather than posing as an independent journal; there is no
-"as seen in" logo bar; the medication box tells blood-thinner users to check
-with their doctor (ginger has a known interaction) instead of claiming "no
-known interactions"; the stat tiles are real survey figures about who buys,
-not invented outcome percentages.
+**Deliberately different from Fascial:** the masthead is "Health & Science
+Journal" but the strip says "Advertorial" rather than "Independent", and the
+footer says the journal is published by Alvenica; the byline is the
+publication, not an invented doctor; there is no "as seen in" logo bar; the
+medication box tells blood-thinner users to check with their doctor instead of
+claiming "no known interactions".
 
 ### Still outstanding
 
@@ -48,9 +48,15 @@ not invented outcome percentages.
   verified reviews with a timeline.
 - **"Not sold on Amazon".** Built but off (`showNotOnAmazon = false`). Turn it
   on only if it is true.
-- **Outcome results.** No outcome data yet, so there are no Fascial-style
-  "84% felt like themselves again" tiles.
-- **Founder story / byline.** Byline is the publication, not a person.
+- **Results stats source.** The 92 / 89 / 78 / 83% figures come from
+  Alvenica's own PDP artwork ("after only 4 weeks of use"). Confirm the survey
+  behind them (sample size, dates) before running traffic.
+- **Author.** Send a real name, photo and credentials (or Sarah's) and set
+  `byline` in the content file. No invented credentials.
+- **Held images:** the team photo (lab coats and scrubs imply clinicians), the
+  customer collage (AI-generated people plus a Trustpilot score), and the
+  nine-month ginger render (month 9 goes dark brown, contradicting "the root
+  looks about the same"). `aging.svg` stays until a lighter render exists.
 - **Footer links.** Privacy, terms and contact have no URLs yet.
 - **A shogaol-and-COX-2 citation** if we want a fifth evidence card.
 - **Tracking.** Same RedTrack note as below.
