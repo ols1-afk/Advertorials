@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 470" font-family="Host Grotesk, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E4F0F4"/><stop offset="1" stop-color="#CFE2E8"/>
+    </linearGradient>
+    <linearGradient id="gel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4C35A"/><stop offset=".55" stop-color="#E09A2E"/><stop offset="1" stop-color="#B8701C"/>
+    </linearGradient>
+  </defs>
+  <rect width="660" height="470" rx="18" fill="#FAF7F0"/>
+  <text x="30" y="48" font-size="17" font-weight="700" letter-spacing="1.8" fill="#A8503C">WHY SHOGAOL NEEDS A FAT</text>
+  <text x="30" y="78" font-size="19" fill="#6F7680">Shogaol is an oil. Your stomach is mostly water.</text>
+  <line x1="330" y1="100" x2="330" y2="446" stroke="#E7E3D9" stroke-width="2"/>
+
+  <path d="M95,116 L235,116 L222,326 C221,338 212,346 200,346 L130,346 C118,346 109,338 108,326 Z" fill="#FFFFFF" stroke="#9AA0A8" stroke-width="2.5"/>
+  <path d="M100,166 L230,166 L222,326 C221,338 212,346 200,346 L130,346 C118,346 109,338 108,326 Z" fill="url(#water)"/>
+  <g fill="#D9B56A" stroke="#A9823A" stroke-width="1.5">
+    <circle cx="140" cy="172" r="10"/><circle cx="154" cy="167" r="8"/><circle cx="129" cy="166" r="7"/>
+    <circle cx="190" cy="170" r="9"/><circle cx="202" cy="165" r="7"/>
+    <circle cx="160" cy="332" r="9"/><circle cx="174" cy="334" r="7"/><circle cx="146" cy="335" r="6"/>
+  </g>
+  <text x="165" y="390" text-anchor="middle" font-size="22" font-weight="700" fill="#1F2530">Dry powder</text>
+  <text x="165" y="418" text-anchor="middle" font-size="18" fill="#6F7680">clumps and passes</text>
+  <text x="165" y="442" text-anchor="middle" font-size="18" fill="#6F7680">straight through</text>
+
+  <path d="M425,116 L565,116 L552,326 C551,338 542,346 530,346 L460,346 C448,346 439,338 438,326 Z" fill="#FFFFFF" stroke="#9AA0A8" stroke-width="2.5"/>
+  <path d="M430,166 L560,166 L552,326 C551,338 542,346 530,346 L460,346 C448,346 439,338 438,326 Z" fill="url(#water)"/>
+  <g transform="rotate(-28 495 246)">
+    <rect x="458" y="227" width="74" height="38" rx="19" fill="url(#gel)" stroke="#9A5E16" stroke-width="1.5"/>
+    <ellipse cx="478" cy="237" rx="10" ry="4.5" fill="#FFFFFF" opacity=".55"/>
+  </g>
+  <g fill="#E9A63A" opacity=".85">
+    <circle cx="455" cy="206" r="4.5"/><circle cx="470" cy="290" r="4"/><circle cx="532" cy="202" r="5"/><circle cx="540" cy="282" r="4"/>
+    <circle cx="510" cy="312" r="3.5"/><circle cx="452" cy="252" r="3.5"/><circle cx="548" cy="240" r="3.5"/><circle cx="486" cy="186" r="3.5"/>
+  </g>
+  <text x="495" y="390" text-anchor="middle" font-size="22" font-weight="700" fill="#1F2530">In coconut oil</text>
+  <text x="495" y="418" text-anchor="middle" font-size="18" fill="#6F7680">spreads out, carried</text>
+  <text x="495" y="442" text-anchor="middle" font-size="18" fill="#6F7680">into the blood</text>
+</svg>

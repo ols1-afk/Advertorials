@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 660" font-family="Host Grotesk, Helvetica Neue, Arial, sans-serif">
+  <rect width="660" height="660" rx="18" fill="#FAF7F0"/>
+  <g fill="#FFFFFF" stroke="#D8D3C6" stroke-width="1.5">
+    <rect x="20" y="20" width="304" height="304" rx="16"/>
+    <rect x="336" y="20" width="304" height="304" rx="16"/>
+    <rect x="20" y="336" width="304" height="304" rx="16"/>
+    <rect x="336" y="336" width="304" height="304" rx="16"/>
+  </g>
+  <g font-size="16" font-weight="700" letter-spacing="1.4" fill="#A8503C">
+    <text x="42" y="56">01</text><text x="358" y="56">02</text><text x="42" y="372">03</text><text x="358" y="372">04</text>
+  </g>
+
+  <g transform="translate(172 150)">
+    <path d="M-62,30 A62,62 0 0 1 62,30" fill="#F6DFA5" stroke="#D9A441" stroke-width="3"/>
+    <g stroke="#D9A441" stroke-width="3" stroke-linecap="round">
+      <line x1="0" y1="-48" x2="0" y2="-64"/><line x1="-46" y1="-22" x2="-58" y2="-32"/><line x1="46" y1="-22" x2="58" y2="-32"/>
+    </g>
+    <line x1="-100" y1="30" x2="100" y2="30" stroke="#1F2530" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-20,30 L-20,-2 L22,-2 L22,30 M-20,10 L22,10 M-20,-2 L-20,-30 L-6,-30 L-6,-2" fill="none" stroke="#8F4230" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+  </g>
+  <text x="172" y="250" text-anchor="middle" font-size="23" font-weight="700" fill="#1F2530">Stiff all morning</text>
+  <text x="172" y="280" text-anchor="middle" font-size="18" fill="#6F7680">an hour before you bend</text>
+
+  <g transform="translate(488 142)" fill="none" stroke="#1F2530" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="-74" r="15"/>
+    <path d="M0,-58 L0,10 M0,-44 L-34,-8 L-46,22 M0,-44 L34,-8 L46,22 M0,10 L-20,52 L-24,86 M0,10 L20,52 L24,86"/>
+  </g>
+  <g fill="#D9473F" stroke="#FFFFFF" stroke-width="2.5">
+    <circle cx="468" cy="194" r="8"/><circle cx="508" cy="194" r="8"/>
+    <circle cx="488" cy="152" r="7"/>
+    <circle cx="442" cy="164" r="6.5"/><circle cx="534" cy="164" r="6.5"/>
+    <circle cx="522" cy="134" r="6"/>
+  </g>
+  <text x="488" y="262" text-anchor="middle" font-size="23" font-weight="700" fill="#1F2530">Spreading</text>
+  <text x="488" y="290" text-anchor="middle" font-size="18" fill="#6F7680">knee, then both, then hips</text>
+
+  <g transform="translate(172 466)">
+    <rect x="-96" y="-58" width="84" height="96" rx="10" fill="#FFFFFF" stroke="#1F2530" stroke-width="3"/>
+    <rect x="-96" y="-58" width="84" height="26" rx="10" fill="#E7E3D9"/>
+    <text x="-54" y="-39" text-anchor="middle" font-size="16" font-weight="700" fill="#414954">SAT</text>
+    <path d="M-70,8 c4,-14 16,-22 22,-10 c4,10 -10,16 -18,26" fill="none" stroke="#5E9B72" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="-44" cy="-6" r="5" fill="#5E9B72"/>
+    <rect x="12" y="-58" width="84" height="96" rx="10" fill="#FFF3F1" stroke="#B5463A" stroke-width="3"/>
+    <rect x="12" y="-58" width="84" height="26" rx="10" fill="#F5D3CC"/>
+    <text x="54" y="-39" text-anchor="middle" font-size="16" font-weight="700" fill="#8F4230">MON</text>
+    <path d="M38,-14 l32,32 M70,-14 l-32,32" stroke="#B5463A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-6,-6 l12,0 m-5,-5 l5,5 l-5,5" fill="none" stroke="#9AA0A8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="172" y="568" text-anchor="middle" font-size="23" font-weight="700" fill="#1F2530">The day-after flare</text>
+  <text x="172" y="598" text-anchor="middle" font-size="18" fill="#6F7680">busy Saturday, sore Monday</text>
+
+  <g transform="translate(476 462)">
+    <g transform="rotate(-35)">
+      <rect x="-62" y="-20" width="92" height="40" rx="20" fill="#FFFFFF" stroke="#1F2530" stroke-width="3"/>
+      <path d="M-16,-20 L10,-20 A20,20 0 0 1 30,0 A20,20 0 0 1 10,20 L-16,20 Z" fill="#E7E3D9"/>
+      <line x1="-16" y1="-20" x2="-16" y2="20" stroke="#1F2530" stroke-width="3"/>
+    </g>
+    <circle cx="52" cy="22" r="34" fill="#FFFFFF" stroke="#A8503C" stroke-width="3.5"/>
+    <path d="M52,0 L52,22 L68,30" fill="none" stroke="#A8503C" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="488" y="568" text-anchor="middle" font-size="23" font-weight="700" fill="#1F2530">Pills wear off sooner</text>
+  <text x="488" y="598" text-anchor="middle" font-size="18" fill="#6F7680">hours, not the afternoon</text>
+</svg>

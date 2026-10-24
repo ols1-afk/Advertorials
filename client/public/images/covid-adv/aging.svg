@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 480" font-family="Host Grotesk, Helvetica Neue, Arial, sans-serif">
+  <rect width="660" height="480" rx="18" fill="#FAF7F0"/>
+  <text x="30" y="48" font-size="17" font-weight="700" letter-spacing="1.8" fill="#A8503C">NINE MONTHS OF SLOW DRYING</text>
+  <text x="30" y="78" font-size="19" fill="#6F7680">The root looks about the same. The compound inside changes.</text>
+
+  <line x1="90" y1="196" x2="570" y2="196" stroke="#D8D3C6" stroke-width="4" stroke-linecap="round"/>
+  <g font-size="17" font-weight="700" letter-spacing="1" fill="#414954" text-anchor="middle">
+    <text x="90" y="128">FRESH</text><text x="250" y="128">MONTH 3</text><text x="410" y="128">MONTH 6</text><text x="570" y="128">MONTH 9</text>
+  </g>
+
+  <g>
+    <circle cx="90" cy="196" r="44" fill="#F1DDA0" stroke="#C9A564" stroke-width="3"/>
+    <circle cx="90" cy="196" r="30" fill="none" stroke="#E3C47F" stroke-width="2"/>
+    <circle cx="90" cy="196" r="8" fill="#E8CC88"/>
+    <path d="M250,156 C276,154 290,176 290,196 C290,222 272,236 250,236 C224,236 210,218 211,196 C212,172 228,157 250,156 Z" fill="#ECD593" stroke="#C29C5A" stroke-width="3"/>
+    <circle cx="250" cy="196" r="25" fill="none" stroke="#DDBC72" stroke-width="2"/>
+    <path d="M410,160 C432,160 446,178 445,197 C444,220 428,231 409,231 C388,231 375,216 376,196 C377,176 390,160 410,160 Z" fill="#E6CC86" stroke="#B9934F" stroke-width="3"/>
+    <path d="M392,186 q18,-8 34,2 M394,206 q16,8 30,-2" fill="none" stroke="#CDAA66" stroke-width="2"/>
+    <path d="M570,164 C589,163 601,180 600,197 C599,216 586,227 569,227 C551,228 540,214 541,196 C542,178 553,165 570,164 Z" fill="#E0C27A" stroke="#B08A46" stroke-width="3"/>
+    <path d="M554,184 q16,-6 30,2 M555,198 q14,6 28,-1 M558,212 q12,4 22,-2" fill="none" stroke="#C49F5C" stroke-width="2"/>
+  </g>
+
+  <g font-size="17" font-weight="700">
+    <text x="30" y="286" fill="#8A8371">Gingerol</text>
+    <text x="30" y="346" fill="#A8503C">Shogaol</text>
+  </g>
+  <g>
+    <rect x="50" y="296" width="80" height="16" rx="8" fill="#EFE9DC"/><rect x="50" y="296" width="80" height="16" rx="8" fill="#C9C1AE"/>
+    <rect x="210" y="296" width="80" height="16" rx="8" fill="#EFE9DC"/><rect x="210" y="296" width="52" height="16" rx="8" fill="#C9C1AE"/>
+    <rect x="370" y="296" width="80" height="16" rx="8" fill="#EFE9DC"/><rect x="370" y="296" width="26" height="16" rx="8" fill="#C9C1AE"/>
+    <rect x="530" y="296" width="80" height="16" rx="8" fill="#EFE9DC"/><rect x="530" y="296" width="9" height="16" rx="4.5" fill="#C9C1AE"/>
+    <rect x="50" y="356" width="80" height="16" rx="8" fill="#EFE9DC"/>
+    <rect x="210" y="356" width="80" height="16" rx="8" fill="#EFE9DC"/><rect x="210" y="356" width="24" height="16" rx="8" fill="#A8503C"/>
+    <rect x="370" y="356" width="80" height="16" rx="8" fill="#EFE9DC"/><rect x="370" y="356" width="52" height="16" rx="8" fill="#A8503C"/>
+    <rect x="530" y="356" width="80" height="16" rx="8" fill="#EFE9DC"/><rect x="530" y="356" width="80" height="16" rx="8" fill="#A8503C"/>
+  </g>
+  <text x="96" y="412" text-anchor="middle" font-size="18" fill="#414954">the burn you taste</text>
+  <text x="564" y="412" text-anchor="middle" font-size="18" font-weight="700" fill="#A8503C">what reaches COX-2</text>
+  <text x="30" y="456" font-size="15" fill="#9AA0A8">Illustration only. Not measured values.</text>
+</svg>

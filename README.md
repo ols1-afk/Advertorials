@@ -14,6 +14,57 @@ which runs the same stack in production. The structure, styling and deploy setup
 carried over; that offer's copy, artwork and tracking identifiers deliberately
 did not.
 
+## COVID-style advertorial (branch `Try-Fascial-Covid-style-adv`)
+
+On this branch `/` serves a long-read advertorial modelled on Fascial's
+"Emerging research is pointing to a new root cause" page: same layout, Host
+Grotesk type, rust-and-cream palette, evidence cards, symptom cards, stat
+tiles, sticky buy bar. The copy is Alvenica's: COVID switches COX-2 on, and in
+older joints the "scissors" stay out and keep cutting the cartilage. The
+listicle from `main` is still reachable at `/listicle`.
+
+| What                                  | Where                                           |
+| ------------------------------------- | ----------------------------------------------- |
+| Copy, images, CTA URL, footer sources | `client/src/content/covidAdvertorialContent.ts` |
+| Page                                  | `client/src/pages/CovidAdvertorial.tsx`         |
+| Styles                                | `client/src/pages/CovidAdvertorial.css`         |
+| Mechanism illustrations (SVG)         | `client/public/images/covid-adv/`               |
+| Product photos                        | Hotlinked from Alvenica's Shopify CDN           |
+
+The article is an ordered array of typed blocks (`p`, `h2`, `figure`,
+`evidence`, `symptoms`, `stats`, `cta`, …). Reorder the page by reordering
+the array. Body copy understands `**bold**`, `*italic*` and `==highlight==`.
+
+**Deliberately different from Fascial:** the masthead says "Advertorial" and
+names Alvenica rather than posing as an independent journal; there is no
+"as seen in" logo bar; the medication box tells blood-thinner users to check
+with their doctor (ginger has a known interaction) instead of claiming "no
+known interactions"; the stat tiles are real survey figures about who buys,
+not invented outcome percentages.
+
+### Still outstanding
+
+- **Reviews.** `reviews` is empty, so the section renders nothing. Add three
+  verified reviews with a timeline.
+- **"Not sold on Amazon".** Built but off (`showNotOnAmazon = false`). Turn it
+  on only if it is true.
+- **Outcome results.** No outcome data yet, so there are no Fascial-style
+  "84% felt like themselves again" tiles.
+- **Founder story / byline.** Byline is the publication, not a person.
+- **Footer links.** Privacy, terms and contact have no URLs yet.
+- **A shogaol-and-COX-2 citation** if we want a fifth evidence card.
+- **Tracking.** Same RedTrack note as below.
+
+### Claims to clear before traffic
+
+- The COVID → COX-2 → cartilage chain is an inference across three studies
+  (cells and mice; an 8-month inflammation cohort; a pain meta-analysis). The
+  copy never says one study proved it. Keep it that way.
+- No claim that Alvenica treats COVID or long COVID; the footer says so.
+- Warmth within about 20 minutes; "easy on the stomach"; the guarantee terms.
+- The product photos carry the brand's own claims ("5x", "boosts absorption
+  by up to 3x", "works like ibuprofen without the stomach burn").
+
 ## Stack
 
 | Layer       | Technology                                             |

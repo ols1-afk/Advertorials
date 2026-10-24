@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 460" font-family="Host Grotesk, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <symbol id="sc" viewBox="0 0 44 40">
+      <polygon points="11,14 40,25 37,28.5 13,18.5" fill="#9AA3AE" stroke="#4B5563" stroke-width="1.2" stroke-linejoin="round"/>
+      <polygon points="11,26 40,15 37,11.5 13,21.5" fill="#B8C0C9" stroke="#4B5563" stroke-width="1.2" stroke-linejoin="round"/>
+      <circle cx="7.5" cy="11" r="5.2" fill="none" stroke="#A8503C" stroke-width="3"/>
+      <circle cx="7.5" cy="29" r="5.2" fill="none" stroke="#A8503C" stroke-width="3"/>
+      <circle cx="22" cy="20" r="1.8" fill="#4B5563"/>
+    </symbol>
+    <radialGradient id="hot" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#D9473F" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#D9473F" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="660" height="460" rx="18" fill="#FAF7F0"/>
+  <line x1="330" y1="28" x2="330" y2="432" stroke="#E7E3D9" stroke-width="2"/>
+
+  <text x="165" y="52" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="1.8" fill="#6F7680">HEALTHY RESPONSE</text>
+  <text x="165" y="84" text-anchor="middle" font-size="24" font-weight="700" fill="#1F2530">Snip, then put away</text>
+  <rect x="70" y="150" width="190" height="160" rx="12" fill="#E9DCC4" stroke="#C9B48E" stroke-width="2"/>
+  <rect x="86" y="170" width="158" height="54" rx="7" fill="#F4EBD9" stroke="#C9B48E" stroke-width="1.5"/>
+  <rect x="145" y="191" width="40" height="9" rx="4.5" fill="#8F4230"/>
+  <rect x="86" y="238" width="158" height="54" rx="7" fill="#F4EBD9" stroke="#C9B48E" stroke-width="1.5"/>
+  <rect x="145" y="259" width="40" height="9" rx="4.5" fill="#8F4230"/>
+  <circle cx="236" cy="128" r="22" fill="#E7F2EA" stroke="#5E9B72" stroke-width="2"/>
+  <path d="M225,128 l8,8 l14,-16" fill="none" stroke="#3F7F55" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g text-anchor="middle" font-size="20" fill="#1F2530">
+    <text x="165" y="356">Damage cleared.</text>
+    <text x="165" y="382">Scissors go back</text>
+    <text x="165" y="408">in the drawer.</text>
+  </g>
+
+  <text x="495" y="52" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="1.8" fill="#A8503C">AFTER COVID</text>
+  <text x="495" y="84" text-anchor="middle" font-size="24" font-weight="700" fill="#1F2530">The drawer stays open</text>
+  <ellipse cx="495" cy="150" rx="150" ry="60" fill="url(#hot)"/>
+  <rect x="400" y="150" width="190" height="160" rx="12" fill="#E9DCC4" stroke="#C9B48E" stroke-width="2"/>
+  <rect x="416" y="238" width="158" height="54" rx="7" fill="#F4EBD9" stroke="#C9B48E" stroke-width="1.5"/>
+  <rect x="475" y="259" width="40" height="9" rx="4.5" fill="#8F4230"/>
+  <rect x="424" y="158" width="142" height="40" rx="4" fill="#C9B48E"/>
+  <rect x="392" y="188" width="206" height="44" rx="7" fill="#F4EBD9" stroke="#B5A07A" stroke-width="1.5"/>
+  <rect x="475" y="205" width="40" height="9" rx="4.5" fill="#8F4230"/>
+  <use href="#sc" x="426" y="110" width="52" height="47" transform="rotate(-30 452 133)"/>
+  <use href="#sc" x="476" y="94" width="56" height="51" transform="rotate(-8 504 119)"/>
+  <use href="#sc" x="530" y="116" width="50" height="45" transform="rotate(18 555 138)"/>
+  <g text-anchor="middle" font-size="20" fill="#1F2530">
+    <text x="495" y="356">More COX-2 with age,</text>
+    <text x="495" y="382">less estrogen to close it.</text>
+    <text x="495" y="408" font-weight="700" fill="#A8503C">So they keep cutting.</text>
+  </g>
+</svg>
